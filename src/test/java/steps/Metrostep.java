@@ -9,7 +9,7 @@ public class Metrostep {
     public void el_usuario_está_en_la_página_web_ebay() {
         homePage = new HomePage();
         String url ="https://www.ebay.com/";
-        homePage.openBrowserAndNavigate(url);
+        homePage.openBrowserAndNavigate(url,"chrome");
     }
     @When("el usuario se desplaza hacia el elemento miles de juguetes")
     public void el_usuario_se_desplaza_hacia_el_elemento_miles_de_juguetes() {
@@ -25,7 +25,7 @@ public class Metrostep {
     public void que_el_usuario_está_en_la_página_de_resultados_de_búsqueda_de_gorras_en_e_bay() {
         homePage = new HomePage();
         String url ="https://www.ebay.com/";
-        homePage.openBrowserAndNavigate(url);
+        homePage.openBrowserAndNavigate(url,"chrome");
         homePage.enterSearchText("gorras");
         homePage.clickSearchButton();
     }

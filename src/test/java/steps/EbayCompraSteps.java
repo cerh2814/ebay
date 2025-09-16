@@ -16,7 +16,7 @@ public class EbayCompraSteps {
     public void navigateToEbay() {
 
         homePage = new HomePage();
-        homePage.openBrowserAndNavigate("https://www.ebay.com");
+        homePage.openBrowserAndNavigate("https://www.ebay.com", "chrome");
     }
 
     @When("busco la gorra")

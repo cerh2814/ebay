@@ -11,9 +11,9 @@ public class EbaySteps {
     private static HomePage homePage;
 
     @Given("que abro el navegador e ingreso a la URL de eBay")
-    public void openAndNavigateToEbay() {
+    public void openAndNavigateToEbayxx() {
         homePage = new HomePage();
-        homePage.openBrowserAndNavigate("https://www.ebay.com");
+        homePage.openBrowserAndNavigate("https://www.ebay.com", "chrome");
     }
 
     @Then("valido que la URL es correcta")

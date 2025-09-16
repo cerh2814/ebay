@@ -37,6 +37,11 @@ public class EbayLoginSteps {
         loginPage.loginexitoso();
 
     }
+    @Then("valido que el login no fue exitoso")
+    public void valido_que_el_login_no_fue_exitoso() {
+        loginPage = new LoginPage();
+        loginPage.loginnoexitoso();
+    }
 
 
 

@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
             features = "src/test/resources/features",
             glue = "stepdefinitions",
             plugin = {"pretty", "html:target/cucumber-reports/cucumber-pretty", "json:target/cucumber-reports/cucumber.json"},
-            tags = "@Login"
+            tags = "@LoginNegativo"
     )
     public class runner {
     }

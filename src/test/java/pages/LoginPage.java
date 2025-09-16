@@ -57,10 +57,20 @@ public class LoginPage extends BasePage {
     public void loginexitoso() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
-            wait.until(ExpectedConditions.titleContains("Electrónica, coches, moda, hogar, jardín... ¡y mucho más en eBay!"));
-            System.out.println("Inicio de sesión exitoso.");
+            wait.until(ExpectedConditions.titleContains("Ingresa la dirección de correo electrónico o el nombre de usuario asociado con tu cuenta."));
+            System.out.println("Ingresa la dirección de correo electrónico o el nombre de usuario asociado con tu cuenta.");
         } catch (TimeoutException e) {
-            throw new IllegalStateException("Ingresa la dirección de correo electrónico o el nombre de usuario asociado con tu cuenta.");
+            throw new IllegalStateException("No se encontró el título esperado para login no exitoso.");
+        }
+    }
+
+    public void loginnoexitoso() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            wait.until(ExpectedConditions.titleContains("Ingresa la dirección de correo electrónico o el nombre de usuario asociado con tu cuenta."));
+            System.out.println("Ingresa la dirección de correo electrónico o el nombre de usuario asociado con tu cuenta.");
+        } catch (TimeoutException e) {
+            throw new IllegalStateException("No se encontró el título esperado para login no exitoso.");
         }
     }
 

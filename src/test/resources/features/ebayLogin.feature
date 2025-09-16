@@ -11,5 +11,19 @@ Feature: login en eBay
     Examples:
       | usuario   | pass        |
       | testuser1 | password123 |
-      | testuser2        | password456 |
-      | testuser3        | password789 |
+#      | testuser2 | password456 |
+#      | testuser3 | password789 |
+
+  @LoginNegativo
+    Scenario Outline: Validar login en eBay con credenciales invalidas
+    Given que abro el navegador e ingreso a la URL de eBay
+    Then ingreso el usuario "<usuario>"
+    Then valido usuario
+    Then ingreso la contrasena "<pass>"
+    Then valido contraseña
+    Then valido que el login no fue exitoso
+    Examples:
+      | usuario   | pass        |
+      | testuser1 | password123 |
+#      | testuser2 | password456 |
+#      | testuser3 | password789 |

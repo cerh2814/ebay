@@ -16,9 +16,9 @@ public class EbaySteps {
     @Given("que abro el navegador e ingreso a la URL de eBay")
     public void openAndNavigateToEbay() {
 
-         homePage.openBrowserAndNavigate("https://www.ebay.com", "chrome");
-        //homePage.openBrowserAndNavigate("https://www.ebay.com", "firefox");
-       // homePage.openBrowserAndNavigate("https://www.ebay.com", "edge");
+        homePage.openBrowserAndNavigate("https://www.ebay.com", "chrome");
+         homePage.openBrowserAndNavigate("https://www.ebay.com", "firefox");
+        // homePage.openBrowserAndNavigate("https://www.ebay.com", "edge");
 
     }
 
