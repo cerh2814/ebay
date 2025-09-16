@@ -1,7 +1,6 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.*;
 import org.junit.After;
 import pages.HomePage;
 
@@ -18,7 +17,7 @@ public class EbaySteps {
     public void openAndNavigateToEbay() {
 
          homePage.openBrowserAndNavigate("https://www.ebay.com", "chrome");
-       // homePage.openBrowserAndNavigate("https://www.ebay.com", "firefox");
+        //homePage.openBrowserAndNavigate("https://www.ebay.com", "firefox");
        // homePage.openBrowserAndNavigate("https://www.ebay.com", "edge");
 
     }
@@ -30,12 +29,21 @@ public class EbaySteps {
         assertEquals("La URL no es la esperada", expectedUrl, actualUrl);
         Thread.sleep(5000);
 
+
     }
-    @After // <-- Se ejecuta después de cada escenario
-    public void tearDown() {
+    @After
+    @Then("cerrar el navegador")
+    public void cerrar_el_navegador() {
         if (homePage != null) {
             homePage.closeBrowser();
         }
+    }
+
+//    @After // <-- Se ejecuta después de cada escenario
+//    public void tearDown() {
+//        if (homePage != null) {
+//            homePage.closeBrowser();
+//        }
 
 }
-}
+

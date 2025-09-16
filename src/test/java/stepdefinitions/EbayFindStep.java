@@ -12,6 +12,8 @@ public class EbayFindStep {
     public void buscar_el_producto(String producto) {
         findPage = new FindPage();
         findPage.buscarProducto(producto);
+        findPage.validarBusqueda(producto);
+
 
     }
 

@@ -4,9 +4,10 @@ Feature: Validar pagina de eBay
     Given que abro el navegador e ingreso a la URL de eBay
     Then valido que la URL es correcta
     Then buscar el producto "<producto>"
+    Then cerrar el navegador
 
     Examples:
-      | producto       |
-      | PlayStation 5  |
-      | Xbox Series X  |
+      | producto      |
+      | PlayStation 5 |
+      | Xbox Series X |
       | Nintendo Switch|
